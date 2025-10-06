@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Fondo blanco */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+#main {
+  width: 720px;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+#top-nav {
+  font-size: 28px;
+  color: #1e88e5;
+  padding: 10px 0;
+  font-weight: normal;
+  background-color: #ffffff;
+}
+
+#top-nav b {
+  color: #1565c0;
+}
+
+#header img {
+  display: block;
+  width: 720px;
+  height: 160px;
+}
+
+/* Menú lateral */
+#navigation {
+  float: left;
+  width: 150px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+/* “main menu” con una sola línea */
+#navigation::before {
+  content: "Main menu";
+  display: block;
+  text-align: right;
+  color: #1e88e5;
+  font-weight: bold;
+  font-size: 12px;
+  border-bottom: 1px dashed #cccccc;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+/* Enlaces */
+#navigation a {
+  display: block;
+  color: #333333;
+  text-decoration: none;
+  padding-left: 5px;
+  border-left: 1px solid #cccccc;
+}
+
+#navigation a:hover {
+  color: #1e88e5;
+}
+
+#content {
+  margin-left: 180px;      /* deja espacio para el menú lateral */
+  padding: 0;              /* quitamos todo el padding interno */
+}
+
+#content h1 {
+  font-size: 20px;
+  color: #1e88e5;
+  border-bottom: 1px solid #1e88e5;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  font-weight: normal;
+  position: relative;
+  padding-left: 420px; /* mueve el texto */
+}
+
+#content h1::before { 
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #1e88e5; /* línea fija en su lugar */
+}
+
+#content p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #333333;
+  text-align: justify;          /* texto alineado igual que los títulos */
+}
+
+#content a {
+  color: #1e88e5;
+  text-decoration: underline;
+}
+/* Footer */
+#footer {
+  clear: both;
+  text-align: center;
+  font-size: 12px;
+  color: #999999;
+  padding: 20px 0;
+  background-color: #ffffff;
+}
+
+#footer hr {
+  border: none;
+  border-top: 1px solid #cccccc;
+  margin-bottom: 10px;
+}
