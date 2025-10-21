@@ -1,0 +1,156 @@
+/* ==== RESETEO ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background-color: #fff;
+}
+
+/* ==== HEADER SUPERIOR ==== */
+.header-top {
+  background-color: #f8f8f8;
+  color: #666;
+  font-size: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+
+.header-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.header-top strong {
+  color: #111;
+}
+
+.header-top__info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo h2 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: #c4c4c4;
+}
+
+.logo p {
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* ==== HERO ==== */
+.hero {
+  background-color: #fafafa;
+  padding: 80px 0;
+}
+
+.hero-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 420px;
+}
+
+.hero-text h1 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.hero-image img {
+  width: 420px;
+  height: auto;
+  display: block;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-bottom: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .header-top__info {
+    position: static;
+    transform: none;
+    text-align: center;
+    display: block;
+    margin: 5px auto 0;
+  }
+}

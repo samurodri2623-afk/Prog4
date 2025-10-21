@@ -1,0 +1,72 @@
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{font-family: 'Poppins', "Helvetica Neue", Arial, sans-serif;color:#111;background:#fff}
+
+/* HEADER SUPERIOR */
+.header-top{background:#fafafa;border-bottom:1px solid #eee;font-size:14px;color:#666}
+.header-container{width:92%;max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:flex-start;position:relative;padding:10px 0}
+.header-top__contact{z-index:3}
+.header-top__contact strong{color:#111}
+.header-top__info{position:absolute;left:50%;transform:translateX(-50%);z-index:2;color:#666}
+
+/* NAVBAR / LOGO */
+.nav-inner{width:92%;max-width:1200px;margin:0 auto;padding:18px 0;display:flex;align-items:center;justify-content:space-between}
+.brand-block{text-decoration:none;color:inherit}
+.logo{display:flex;flex-direction:column;align-items:flex-start}
+.logo-title{font-size:28px;font-weight:800;line-height:1;margin:0}
+.logo .dot{color:#cfcfcf;margin-left:2px}
+.logo-sub{font-size:12px;color:#888;margin-top:4px}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:#fafafa;padding:90px 0;min-height:560px}
+.hero-inner{width:92%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:55% 45%;align-items:center;gap:20px;position:relative;min-height:560px}
+.hero-text{z-index:6;max-width:560px;padding-left:20px}
+
+/* typography big */
+.hero-title{font-size:96px;font-weight:900;line-height:0.95;color:#111;margin-bottom:18px;letter-spacing:-2px;margin-left:-6px}
+.hero-desc{font-size:16px;color:#777;line-height:1.6;margin-bottom:28px;max-width:520px}
+.btn-cta{display:inline-block;background:#fff;padding:14px 28px;text-decoration:none;border:1px solid rgba(0,0,0,0.06);color:#111;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,0.03)}
+
+/* hero image as background on the right
+   The image file in your project root is "Imagen 1.jpg".
+   CSS file is css/styles.css so path to that image is ../Imagen 1.jpg */
+.hero-visual{position:relative;/* now sits in the grid's right column */width:100%;height:100%;min-height:560px;background-image:url("../img/imagen1.jpg");background-repeat:no-repeat;background-position:center right;background-size:cover;z-index:1}
+
+/* ensure the visual covers minimum area on very wide screens and stays responsive */
+@media (min-width:1600px){
+  .hero-visual{width:50%}
+}
+
+/* overlay (máscara blanca en la izquierda para legibilidad) */
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:58%;background:linear-gradient(90deg,rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 40%, rgba(255,255,255,0) 100%);z-index:3;pointer-events:none}
+
+/* responsive */
+@media (max-width:1100px){
+  .hero-title{font-size:84px}
+  .hero-inner{grid-template-columns:52% 48%}
+  .hero::before{width:52%}
+}
+/* Larger screens: make title even bigger to match demo */
+@media (min-width:1400px){
+  .hero-title{font-size:110px}
+}
+@media (min-width:1800px){
+  .hero-title{font-size:130px}
+  .hero-inner{grid-template-columns:50% 50%}
+}
+@media (max-width:900px){
+  .nav-inner .logo{align-items:center}
+  .header-container{justify-content:center}
+  .header-top__contact{position:absolute;left:12px;top:10px}
+  .hero-inner{display:block;text-align:center;padding-bottom:50px}
+  .hero-visual{width:100%;height:320px;background-position:center}
+  .hero::before{display:none}
+  .hero-title{font-size:42px;line-height:1.02;margin-left:0}
+  .hero{padding:50px 0;min-height:auto}
+}
+@media (max-width:480px){
+  .hero-title{font-size:34px}
+  .hero-visual{height:260px}
+  .hero-desc{font-size:14px}
+}
